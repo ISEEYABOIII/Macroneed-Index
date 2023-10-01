@@ -8,22 +8,23 @@
     <meta name="description" content="Build in progress">
     <link rel="icon" href="assets/images/logo.png">
     <title>Build in Progress</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
         body,
         html {
+            font-family: 'SF Pro Display', sans-serif;
             margin: 0;
             height: 100%;
             overflow: hidden;
+            background-color: #f6f6f6;
         }
 
         .container {
-            font-family: 'SF Pro Display', sans-serif;
             display: grid;
             place-items: center;
             height: 100vh;
-            background-color: #f6f6f6;
             position: relative;
         }
 
@@ -33,6 +34,34 @@
             color: #333;
             z-index: 10;
             text-align: center;
+        }
+
+        .social-text {
+            font-size: 1.5rem;
+            color: #333;
+            text-align: center;
+            position: absolute;
+            bottom: 1rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            font-size: 2rem;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #83a956;
         }
 
         @media (max-width: 768px) {
@@ -85,10 +114,19 @@
 <body>
     <div class="container">
         <h1>Build in Progress</h1>
-        <div class="blob" style="top: 20%; left: 20%; width: 200px; height: 200px;"></div>
-        <div class="blob" style="top: 70%; left: 60%; width: 300px; height: 300px;"></div>
-        <div class="blob" style="top: 40%; left: 80%; width: 250px; height: 250px;"></div>
     </div>
+    <div class="social-text">
+        <p>Check us out</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/company/macroneed" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/macroneed.official" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/macroneed.official" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+        </div>
+    </div>
+    <div class="blob" style="top: 20%; left: 20%; width: 200px; height: 200px;"></div>
+    <div class="blob" style="top: 70%; left: 60%; width: 300px; height: 300px;"></div>
+    <div class="blob" style="top: 40%; left: 80%; width: 250px; height: 250px;"></div>
+
 
     <script>
         const blobs = document.querySelectorAll('.blob');
